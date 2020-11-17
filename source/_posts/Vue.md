@@ -73,3 +73,23 @@ var daluozha = new Vue({
       this.$set(this.student,"age", 24)
     }
    ```
+
+4. 组件之间通信
+如果你想要将一个对象的所有 property 都作为 prop 传入，你可以使用不带参数的 v-bind (取代 v-bind:prop-name)。例如，对于一个给定的对象 post：
+```
+  post: {
+    id: 1,
+    title: 'My Journey with Vue'
+  }
+```
+下面的模板：
+```
+<blog-post v-bind="post"></blog-post>
+```
+等价于：
+```
+<blog-post
+  v-bind:id="post.id"
+  v-bind:title="post.title"
+></blog-post>
+```
