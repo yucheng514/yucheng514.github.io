@@ -92,6 +92,19 @@ tags:
 
          // 计数器目前是 3 
         ```
+   - 周期性调度方法
+   1. 
+   ```
+      let timerId = setInverval(()=>alert('tick'),2000)   
+   ```
+   2. 下一次调用在前一次调用完成时再调度
+   ```
+   let timerId = setTimeout(function tick(){
+      alert('tick')
+      timerId = setTimeout(tick,2000)
+   },2000)
+   ```
+
 
 ### 新增的数组方法
    - forEach
