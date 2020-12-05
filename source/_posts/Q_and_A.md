@@ -86,3 +86,16 @@ for (let i = delIndex.length - 1; i >= 0; i--) {
 var o={};
 if(o.x) o.x+=1;  
 ```
+
+### 将数组中某个元素放在首位
+```
+let values = [1, 3, 5, 7, 12, 10];
+let value = 12;  //需要置于首位的元素
+let index = values.indexOf(12);
+if(index) {
+      let first = values.splice(index , 1)[0];
+      values.unshift(first);
+ }
+ console.log(values);
+ //输出 [12, 1, 3, 5, 7, 10 ]
+ ```
