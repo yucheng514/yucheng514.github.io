@@ -2,6 +2,7 @@
 title: Git 学习
 date: 2019-05-21 01:17:26
 tags:
+toc: true
 ---
 
 ### 分支获取另一分支的更新
@@ -22,20 +23,22 @@ tags:
 - 原因：branch 跟 tag 有重名
 
 - 解决方案：改掉本地的分支名
+
 ```
-    git branch -m v1.1.0 local_v1.1.0
+git branch -m v1.1.0 local_v1.1.0
 ```
 
 - 相关 git 命令：
+
 ```
-    git branch -m 旧分支名 新分支名 
-    //重命名
+git branch -m 旧分支名 新分支名 
+//重命名
 
-    git branch -M 旧分支名 新分支名
-    //如果新分支名已存在，进行强制覆盖
+git branch -M 旧分支名 新分支名
+//如果新分支名已存在，进行强制覆盖
 
-    git branch -D 分支名
-    //删除
+git branch -D 分支名
+//删除
 ```
 
 ### git revert 和 git reset 的区别 
@@ -55,20 +58,24 @@ Git鼓励大量使用分支：
 
 ### 获取远程分支到本地
 1. 在本地新建分支 x，并自动切换到该本地分支 x。
-   ```
-    git checkout -b 本地分支名x origin/远程分支名x
-   ```
+
+```
+git checkout -b 本地分支名x origin/远程分支名x
+```
+
 2. 在本地新建分支 x，但是不会自动切换到该本地分支 x，需要手动 checkout。
-   ```
-    git fetch origin 远程分支名x:本地分支名x
-   ```
+
+```
+git fetch origin 远程分支名x:本地分支名x
+```
 
 ### 设定 upstream
 - -u 等同于 --set-upstream
 - 例子：
-   ```
-    git push -u origin feature/pre_release_batch_tool_20200702
-   ```
+
+```
+git push -u origin feature/pre_release_batch_tool_20200702
+```
 
 ### git stash
 - git stash
@@ -81,21 +88,25 @@ Git鼓励大量使用分支：
 ### 一些命令
 - git更新
 
-**git pull origin master**
-
+```
+git pull origin master
+```
 
 - git上传
 
-1. **git add .**
+```
+git add .
 
-2. **git commit -m "  "**
+git commit -m "  "
 
-3. **git push origin master**
+git push origin master
+```
 
 - git终端
 
-**CTRL+C** 中断
+```
+CTRL+C // 中断
 
-**CTRL+D** 退出
-
+CTRL+D // 退出
+```
 
