@@ -1,7 +1,7 @@
 ---
 title: DFS & BFS
-date: 2021-06-02 00:07:39
-tags:
+date: 2020-06-02 00:07:39
+tags: 数据结构
 ---
 
 举一个例子加以说明：leetcode 102 - 二叉树的层次遍历 <https://leetcode-cn.com/problems/binary-tree-level-order-traversal/>
@@ -39,6 +39,7 @@ var levelOrder = function(root) {
     if(!root) return []
     let queue = [root], result = []
     while(queue.length){
+        // 因为队列的长度是动态变化的，所以要将本层要遍历的次数先赋值出来
         let cursize = queue.length, arr = []
         while(cursize){
             let cur = queue.shift()
