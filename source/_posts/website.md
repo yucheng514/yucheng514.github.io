@@ -1,5 +1,5 @@
 ---
-title: 珍藏的一些门钥匙
+title: 一些门钥匙
 date: 2021-05-24 16:38:08
 tags:
 toc: true
@@ -76,6 +76,8 @@ toc: true
   2. Javascript 面向对象编程（二）：构造函数的继承 （对象之间的"继承"的五种方法。） <http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html >
   3. Javascript 面向对象编程（三）：非构造函数的继承 （不使用构造函数实现"继承"。） <https://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html >
 - TypeScript <https://www.tslang.cn/docs/home.html >
+- TypeScript 入门教程 <https://juejin.cn/post/6844904182843965453 >
+- TypeScript Playground <https://www.typescriptlang.org/play/ >
 
 ### UI库
 
@@ -124,6 +126,7 @@ toc: true
 - <http://keycode.info/ >
 - 思源宋体 <https://source.typekit.com/source-han-serif/cn/ >
 - Best of 2020 by NASA <https://www.flickr.com/photos/nasahqphoto/sets/72157717626776513/ >
+- <https://www.allhistory.com/ >
 
 ### 社区 & 论坛
 
