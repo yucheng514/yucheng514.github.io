@@ -1,10 +1,10 @@
 ---
-title: CSS 之 Flex 布局
+title: Flex 布局
 date: 2020-05-24 16:30:29
-tags:
+tags: CSS
 ---
 
-前言：
+<!-- 前言： -->
 
 ### Flex Container 
   1. flex-direction: row,column,row-reverse,column-reverse 。当 row 时，main-axis（主轴）就是 row 、cross-axis（交叉轴）是 column。
