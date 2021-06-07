@@ -47,6 +47,7 @@ toc: true
 - 程序员成长指北 <http://www.inode.club/ >
 - 机器学习 <https://alibaba.github.io/pipcook/#/zh-cn/ >
 - 雅思题库 <https://ieltsonlinetests.com >
+- <https://mtc.nofwl.com/ >
 
 ### 前端相关
 
@@ -113,6 +114,7 @@ toc: true
 - <https://www.lodashjs.com/ >
 - dayjs <https://dayjs.fenxianglu.cn/ >
 - vite <https://cn.vitejs.dev/  >
+- Three.js <https://threejsfundamentals.org/threejs/lessons/zh_cn/threejs-fundamentals.html > & <https://www.bilibili.com/video/BV1zU4y1L7Go >
 
 ### 有趣的网站
 
