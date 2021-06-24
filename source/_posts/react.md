@@ -1,5 +1,5 @@
 ---
-title: react
+title: React & Redux 入坑
 date: 2021-06-07 23:49:05
 tags: Reactjs
 toc: true
