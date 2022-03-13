@@ -31,6 +31,7 @@ toc: true
 - <https://diygod.me/ >
 - <https://molunerfinn.com/ >
 - <https://zxuqian.cn/ >
+- <https://antfu.me/ > & <https://100.antfu.me/ >
 
 ### 学习资料
 
