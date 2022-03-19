@@ -130,6 +130,7 @@ toc: true
 - 思源宋体 <https://source.typekit.com/source-han-serif/cn/ >
 - Best of 2020 by NASA <https://www.flickr.com/photos/nasahqphoto/sets/72157717626776513/ >
 - <https://www.allhistory.com/ >
+- <https://rpdc.xiaohongshu.com/52-design-principles >
 
 ### 社区 & 论坛
 
