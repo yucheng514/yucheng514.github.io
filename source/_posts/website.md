@@ -81,7 +81,11 @@ toc: true
 - TypeScript 入门教程 <https://juejin.cn/post/6844904182843965453 >
 - TypeScript Playground <https://www.typescriptlang.org/play/ >
 
-### UI库
+### Free API 
+- <https://thecatapi.com/ >
+- <https://dog.ceo/dog-api/ >
+
+### UI 库
 
 - <https://undraw.co/illustrations >
 - <https://emilkowalski.github.io/css-effects-snippets/ >
@@ -116,6 +120,8 @@ toc: true
 - dayjs <https://dayjs.fenxianglu.cn/ >
 - vite <https://cn.vitejs.dev/  >
 - Three.js <https://threejsfundamentals.org/threejs/lessons/zh_cn/threejs-fundamentals.html > & <https://www.bilibili.com/video/BV1zU4y1L7Go >
+- pug.js <https://pugjs.org/ >
+- matter.js <https://brm.io/matter-js/ >
 
 ### 有趣的网站
 
@@ -131,6 +137,7 @@ toc: true
 - Best of 2020 by NASA <https://www.flickr.com/photos/nasahqphoto/sets/72157717626776513/ >
 - <https://www.allhistory.com/ >
 - <https://rpdc.xiaohongshu.com/52-design-principles >
+- Lorem Ipsum <https://www.lipsum.com/ >
 
 ### 社区 & 论坛
 

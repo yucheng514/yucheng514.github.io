@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "go": "hexo generate && hexo deploy"
+    "go": "hexo generate && hexo deploy",
+    "use": "nvm use"
   },
   "hexo": {
     "version": "5.4.0"
