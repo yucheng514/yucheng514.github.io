@@ -5,6 +5,9 @@ tags:
 toc: true
 ---
 
+### Github Pages
+- <https://www.daluozha.cn/gobang/ >
+
 ###  技术博客
 
 - 张鑫旭 <https://www.zhangxinxu.com/ >
