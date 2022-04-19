@@ -35,6 +35,7 @@ toc: true
 - <https://molunerfinn.com/ >
 - <https://zxuqian.cn/ >
 - <https://antfu.me/ > & <https://100.antfu.me/ >
+- <https://yating.world/ >
 
 ### 学习资料
 
