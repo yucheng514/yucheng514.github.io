@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>排序、时间复杂度、空间复杂度 | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="🌘排序 &amp;lt;https://www.runoob.com/w3cnote/ten-sorting-algorithm.html &amp;gt;  插入排序：军训排队在已经排好了一个纵队的时候，有人要临时加入到这个队里来，于是教官大声喊道：“新来的，迅速找到你的位置，入队！”于是新来的插入到这个队伍的合适位置中。   直接插入排序  每趟将一个待排序的关键字按照其值的大小插入到已经排好的部分有序序列">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序、时间复杂度、空间复杂度">
+<meta property="og:url" content="http://www.daluozha.cn/2019/02/08/SAnComplexity/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="🌘排序 &amp;lt;https://www.runoob.com/w3cnote/ten-sorting-algorithm.html &amp;gt;  插入排序：军训排队在已经排好了一个纵队的时候，有人要临时加入到这个队里来，于是教官大声喊道：“新来的，迅速找到你的位置，入队！”于是新来的插入到这个队伍的合适位置中。   直接插入排序  每趟将一个待排序的关键字按照其值的大小插入到已经排好的部分有序序列">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-04-20T09:48:51.709Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="排序、时间复杂度、空间复杂度">
+<meta name="twitter:description" content="🌘排序 &amp;lt;https://www.runoob.com/w3cnote/ten-sorting-algorithm.html &amp;gt;  插入排序：军训排队在已经排好了一个纵队的时候，有人要临时加入到这个队里来，于是教官大声喊道：“新来的，迅速找到你的位置，入队！”于是新来的插入到这个队伍的合适位置中。   直接插入排序  每趟将一个待排序的关键字按照其值的大小插入到已经排好的部分有序序列">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-SAnComplexity" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      排序、时间复杂度、空间复杂度
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h2 id="排序"><a class="header-anchor" href="#排序">🌘</a>排序</h2>
+<p>&lt;<a href="https://www.runoob.com/w3cnote/ten-sorting-algorithm.html" target="_blank" rel="noopener">https://www.runoob.com/w3cnote/ten-sorting-algorithm.html</a> &gt;</p>
+<ul>
+<li><strong>插入排序</strong>：<em>军训排队在已经排好了一个纵队的时候，有人要临时加入到这个队里来，于是教官大声喊道：“新来的，迅速找到你的位置，入队！”于是新来的插入到这个队伍的合适位置中。</em>
+<ul>
+<li>
+<p>直接插入排序</p>
+<ul>
+<li>每趟将一个待排序的关键字按照其值的大小插入到已经排好的部分有序序列的适当位置上，直到所有待排关键字都被插入到有序序列中为止。</li>
+<li>时间复杂度最好<strong>O(n)</strong>，最坏<strong>O(n^2)</strong></li>
+<li>空间复杂度<strong>O(1)</strong></li>
+</ul>
+</li>
+<li>
+<p>折半插入排序</p>
+<ul>
+<li>折半查找法的一个基本条件是序列已经有序。</li>
+<li>时间复杂度最好<strong>O(nlog2n)</strong>，最坏<strong>O(n^2)</strong></li>
+<li>空间复杂度<strong>O(1)</strong></li>
+</ul>
+</li>
+<li>
+<p>希尔排序（缩小增量排序）</p>
+<ul>
+<li>
+<p>&lt;<a href="https://www.runoob.com/w3cnote/shell-sort.html" target="_blank" rel="noopener">https://www.runoob.com/w3cnote/shell-sort.html</a> &gt;</p>
+</li>
+<li>
+<p>时间复杂度<strong>O(n<sup>1.5)**或者**O(n</sup>2)</strong></p>
+</li>
+<li>
+<p>空间复杂度<strong>O(1)</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>交换排序</strong>：
+<ul>
+<li>
+<p>起泡排序：<em>军训刚刚开始，一群学生要排队，教官说：“你比你旁边的高，你俩换一下。怎么换完还比下一个高？继续换······”最后这个同学将被换到最终合适的位置。</em></p>
+<ul>
+<li>时间复杂度<strong>O(n^2)</strong></li>
+<li>空间复杂度<strong>O(1)</strong></li>
+</ul>
+</li>
+<li>
+<p>快速排序</p>
+<ul>
+<li>
+<p>&lt;<a href="http://data.biancheng.net/view/117.html" target="_blank" rel="noopener">http://data.biancheng.net/view/117.html</a> &gt;</p>
+</li>
+<li>
+<p>时间复杂度最好<strong>O(nlog2n)</strong>，最坏<strong>O(n^2)</strong></p>
+</li>
+<li>
+<p>空间复杂度<strong>O(log2n)</strong>，快速排序是递归进行的，递归需要栈的辅助，因为它需要的辅助空间比前面几类排序算法大。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>选择排序</strong>：<em>军训排队的时候，教官说：“你们都站着别动，我看谁个子最小。”然后教官选出个子最小的同学，说：“第一个位置是你的了，你和第一个同学换一下，剩下的同学我继续选。”</em>
+<ul>
+<li>
+<p>简单选择排序</p>
+<ul>
+<li>时间复杂度最好<strong>O(nlog2n)</strong>，最坏<strong>O(n^2)</strong></li>
+<li>空间复杂度<strong>O(1)</strong></li>
+</ul>
+</li>
+<li>
+<p>堆排序</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>归并排序</strong>：将两个或两个以上的有序序列合并成一个新的有序序列。</p>
+<ul>
+<li>二路归并排序：<em>继续排队，这次教官想了个特别的方法，他说：“你们每个人，先和旁边的人组成二人组，二人组内部先排好。”看到大家排好了，继续说：“二人组和旁边的二人组继续组合成一个四人组，每个四人组内部排好，动作快！”这样不停排下去，最后全部学生都归并到一个组中，同时也就排好序了。</em></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>基数排序</strong>：最特别的一类，基于多关键字排序的思想，把一个逻辑关键字拆分成多个关键字，与前面的思想完全不同（前面都是要进行“比较”和&quot;移动&quot;这两个操作）。<em>例如，对一副去掉大小王的52张扑克牌进行基数排序，可以先按花色排序（如按红桃、黑桃、方片和梅花的顺序），这样就分成了4堆，然后每一堆再按照从A到K的顺序，排序使这副牌最终有序。</em></li>
+</ul>
+<h2 id="时间复杂度"><a class="header-anchor" href="#时间复杂度">🌘</a>时间复杂度</h2>
+<ul>
+<li>“大 O 表示法”：算法的渐进时间复杂度</li>
+</ul>
+<p><strong>T(n) = O(f(n))</strong></p>
+<p>其中，T(n) 就是代码的渐进时间复杂度，<br>
+f(n) 是代码的执行次数，<br>
+n 称为问题的规模，例如要处理的数组元素的个数为 n</p>
+<ul>
+<li>常见的时间复杂度的代码：</li>
+</ul>
+<p>O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int x = 0 , y = 0;</span><br><span class="line">int temp =x;</span><br><span class="line">x = y;</span><br><span class="line">y = temp;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 1;i &lt;= n;i++)&#123;</span><br><span class="line">  x++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(logn)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int i = 1;</span><br><span class="line">while(i &lt; n)&#123;</span><br><span class="line">  i = i * 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(nlogn)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 0;i &lt;= n;i++)&#123;</span><br><span class="line">  int x = 1;</span><br><span class="line">  while( x&lt;n )&#123;</span><br><span class="line">    x = x * 2;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(n^2)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 1;i &lt;= n;i++)&#123;</span><br><span class="line">  for(int j = 1;j &lt;= n;j++)&#123;</span><br><span class="line">    x++;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(nm)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 1;i &lt;= n;i++)&#123;</span><br><span class="line">  for(int j = 1;j &lt;= m;j++)&#123;</span><br><span class="line">    x++;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="空间复杂度"><a class="header-anchor" href="#空间复杂度">🌘</a>空间复杂度</h2>
+<ul>
+<li>空间复杂度：内存空间增长的趋势</li>
+<li>常用的空间复杂度：</li>
+</ul>
+<p>O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x = 0,y = 0;</span><br><span class="line">x++;</span><br><span class="line">y++;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//数组</span><br><span class="line">int[] newArray = new int[n];</span><br><span class="line">for (int i = 0;i &lt; n;i++)&#123;</span><br><span class="line">  newArray[n] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>O(n^2)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//二维数组</span><br></pre></td></tr></table></figure>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2019/02/08/SAnComplexity/" class="article-date">
+  <time datetime="2019-02-08T08:56:27.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2019/05/21/git-learning/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git 学习
+        
+      </div>
+    </a>
+  
+  
+    <span id="article-nav-older" class="article-nav-link-wrap older"></span>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

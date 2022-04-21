@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vue 2.x 响应式原理 | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Vue 2.x 响应式原理图1  🌘new Vue( ) 做了什么？  new Vue 之后，在 init 中会对传入的 options 中 data 的每个数据都进行 observe。这个 observe 会使用 object.defineProperty 来对数据进行 getter，setter 重写，然后放在实例vm下。注意，observe 并没有直接改动 data，而">
+<meta name="keywords" content="Vuejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 2.x 响应式原理">
+<meta property="og:url" content="http://www.daluozha.cn/2021/05/25/vue-reactive/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="Vue 2.x 响应式原理图1  🌘new Vue( ) 做了什么？  new Vue 之后，在 init 中会对传入的 options 中 data 的每个数据都进行 observe。这个 observe 会使用 object.defineProperty 来对数据进行 getter，setter 重写，然后放在实例vm下。注意，observe 并没有直接改动 data，而">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/daluozha/MyPostImage/master/mini-vue2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/daluozha/MyPostImage/master/mini-vue.jpeg">
+<meta property="og:updated_time" content="2022-04-20T09:48:51.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue 2.x 响应式原理">
+<meta name="twitter:description" content="Vue 2.x 响应式原理图1  🌘new Vue( ) 做了什么？  new Vue 之后，在 init 中会对传入的 options 中 data 的每个数据都进行 observe。这个 observe 会使用 object.defineProperty 来对数据进行 getter，setter 重写，然后放在实例vm下。注意，observe 并没有直接改动 data，而">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/daluozha/MyPostImage/master/mini-vue2.png">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-vue-reactive" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      Vue 2.x 响应式原理
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <center>
+    <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://raw.githubusercontent.com/daluozha/MyPostImage/master/mini-vue2.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">Vue 2.x 响应式原理图1</div>
+</center>
+<h3 id="new-vue-做了什么？"><a class="header-anchor" href="#new-vue-做了什么？">🌘</a>new Vue( ) 做了什么？</h3>
+<ul>
+<li>new Vue 之后，在 init 中会对传入的 options 中 data 的每个数据都进行 observe。这个 observe 会使用 object.defineProperty 来对数据进行 getter，setter 重写，然后放在实例vm下。注意，observe 并没有直接改动 data，而是将里面的数据做了一份副本放在了实例下，相当于提升了一个层级。</li>
+<li>observe中会new Dep，这是一个依赖追踪，当get的时候如果全局变量Dep.target不为null时触发dep.depend()  收集依赖；在set的时候触发dep.notify()  依赖触发。</li>
+<li>observe 之后的某个环节（可能是 mount ），会对挂载的 #app 下所有 dom 建立 watcher 实例，new 的过程中首先会将 Dep.target 设置成 this，然后运行一次 update（这里会首先触发 this.get() 来触发 observe，让 observe 的 get 把当前的依赖收集到 dep 的subs 里面），结束的时候设置成 null。</li>
+<li>双向绑定完成，现在改变 input 的 value 或者 data 的数据都会实时更新另一边，实际上 watcher 都会触发，只是有一个是已更新的又赋值了一次。</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://raw.githubusercontent.com/daluozha/MyPostImage/master/mini-vue.jpeg">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">Vue 2.x 响应式原理图2</div>
+</center>
+<h3 id="代码参考"><a class="header-anchor" href="#代码参考">🌘</a>代码参考</h3>
+<ul>
+<li>实现一个 mini-vue : <a href="https://github.com/daluozha/RENEKTOY/tree/main/handwriting/mini-vue" target="_blank" rel="noopener">https://github.com/daluozha/RENEKTOY/tree/main/handwriting/mini-vue</a></li>
+</ul>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2021/05/25/vue-reactive/" class="article-date">
+  <time datetime="2021-05-24T19:05:47.000Z" itemprop="datePublished">2021-05-25</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vuejs/">Vuejs</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2021/06/07/react/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          React &amp; Redux 入坑
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/24/website/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一些门钥匙</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

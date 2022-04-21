@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>React &amp; Redux 入坑 | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="React.js 在学习 React 的过程中，记录了一些相关的笔记和知识点 代码参考：&amp;lt;https://github.com/daluozha/BEEMO &amp;gt; 🌘React 的一些特点  声名式开发(对应：命令式开发) 可以与其他框架并存(只控制了指定挂载的 div 标签的渲染) 组件化 单向数据流 视图层框架(大型数据通信需要借助别的框架) 函数式编程(方便自动化测试)  🌘R">
+<meta name="keywords" content="Reactjs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React &amp; Redux 入坑">
+<meta property="og:url" content="http://www.daluozha.cn/2021/06/07/react/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="React.js 在学习 React 的过程中，记录了一些相关的笔记和知识点 代码参考：&amp;lt;https://github.com/daluozha/BEEMO &amp;gt; 🌘React 的一些特点  声名式开发(对应：命令式开发) 可以与其他框架并存(只控制了指定挂载的 div 标签的渲染) 组件化 单向数据流 视图层框架(大型数据通信需要借助别的框架) 函数式编程(方便自动化测试)  🌘R">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/daluozha/MyPostImage/master/Redux-Flow.png">
+<meta property="og:updated_time" content="2022-04-20T09:48:51.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React &amp; Redux 入坑">
+<meta name="twitter:description" content="React.js 在学习 React 的过程中，记录了一些相关的笔记和知识点 代码参考：&amp;lt;https://github.com/daluozha/BEEMO &amp;gt; 🌘React 的一些特点  声名式开发(对应：命令式开发) 可以与其他框架并存(只控制了指定挂载的 div 标签的渲染) 组件化 单向数据流 视图层框架(大型数据通信需要借助别的框架) 函数式编程(方便自动化测试)  🌘R">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/daluozha/MyPostImage/master/Redux-Flow.png">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      React &amp; Redux 入坑
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1>React.js</h1>
+<p>在学习 React 的过程中，记录了一些相关的笔记和知识点</p>
+<p>代码参考：&lt;<a href="https://github.com/daluozha/BEEMO" target="_blank" rel="noopener">https://github.com/daluozha/BEEMO</a> &gt;</p>
+<h2 id="react-的一些特点"><a class="header-anchor" href="#react-的一些特点">🌘</a>React 的一些特点</h2>
+<ul>
+<li>声名式开发(对应：命令式开发)</li>
+<li>可以与其他框架并存(只控制了指定挂载的 div 标签的渲染)</li>
+<li>组件化</li>
+<li>单向数据流</li>
+<li>视图层框架(大型数据通信需要借助别的框架)</li>
+<li>函数式编程(方便自动化测试)</li>
+</ul>
+<h2 id="react-数据视图更新原理"><a class="header-anchor" href="#react-数据视图更新原理">🌘</a>React 数据视图更新原理</h2>
+<ol>
+<li>state 数据</li>
+<li>JSX 模板</li>
+<li>数据 + 模板 生成虚拟 DOM (虚拟 DOM 就是一个 JS 对象，用它来描述真实的 DOM)，损耗了少许性能，获得[‘div’, {id: ‘abc’}, [‘span’, {}, ‘hello world’]]</li>
+<li>用虚拟 DOM 的结构生成真实的 DOM，来显示 <code>&lt;div id='abc'&gt;&lt;span&gt;hello world&lt;/span&gt;&lt;/div&gt;</code></li>
+<li>state 发生变化</li>
+<li>数据 + 模板生成新的虚拟DOM（相比直接更换真实DOM，极大的提升了性能）[‘div’, {id: ‘abc’}, [‘span’, {}, ‘bye bye’]]</li>
+<li>比较原始虚拟 DOM 和新的虚拟 DOM 的区别，找到区别是 span 中的内容</li>
+<li>直接操作 DOM，改变 span 中的内容</li>
+</ol>
+<h2 id="redux-工作流程"><a class="header-anchor" href="#redux-工作流程">🌘</a>Redux 工作流程</h2>
+<center>
+    <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://raw.githubusercontent.com/daluozha/MyPostImage/master/Redux-Flow.png">
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">Redux Flow</div>
+</center>
+<h2 id="redux-设计和使用的三项原则"><a class="header-anchor" href="#redux-设计和使用的三项原则">🌘</a>Redux 设计和使用的三项原则</h2>
+<ol>
+<li>store 必须是唯一的</li>
+<li>只有 store 能改变自己的内容，Reducer 应该深拷贝一份 state 修改完毕之后再 return 这份 state</li>
+<li>Reducer 必须是纯函数(纯函数指的是：给定固定的输入，就一定会有固定的输出，而且不会有任何的副作用)</li>
+</ol>
+<h2 id="redux-的核心-api"><a class="header-anchor" href="#redux-的核心-api">🌘</a>Redux 的核心 API</h2>
+<ul>
+<li>createStore</li>
+<li>store.dispatch</li>
+<li>store.getState</li>
+<li>store.subscribe</li>
+</ul>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2021/06/07/react/" class="article-date">
+  <time datetime="2021-06-07T15:49:05.000Z" itemprop="datePublished">2021-06-07</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reactjs/">Reactjs</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2021/06/15/typescript/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          TypeScript 学习参考
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/25/vue-reactive/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 2.x 响应式原理</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

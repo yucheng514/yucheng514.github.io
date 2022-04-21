@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>TypeScript 学习参考 | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript 学习参考">
+<meta property="og:url" content="http://www.daluozha.cn/2021/06/15/typescript/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-04-20T09:48:51.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TypeScript 学习参考">
+<meta name="twitter:description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-typescript" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      TypeScript 学习参考
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h3 id="为什么要使用-typescript"><a class="header-anchor" href="#为什么要使用-typescript">🌘</a>为什么要使用 TypeScript</h3>
+<ul>
+<li>类型推演与类型匹配</li>
+<li>开发编译时报错</li>
+<li>极大程度的避免了低级错误</li>
+<li>支持 JavaScript 最新特性(包含 ES 6/7/8)</li>
+</ul>
+<h3 id="what-s-new"><a class="header-anchor" href="#what-s-new">🌘</a>What’s new ?</h3>
+<ul>
+<li>元组</li>
+<li>interface 接口</li>
+<li>类型推论、联合类型、类型断言</li>
+<li>枚举 Enum</li>
+<li>范型 Generics</li>
+<li>类型别名、字面量、交叉类型</li>
+</ul>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2021/06/15/typescript/" class="article-date">
+  <time datetime="2021-06-15T01:34:18.000Z" itemprop="datePublished">2021-06-15</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2022/03/19/vue3/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue3 One Piece 初探
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/06/07/react/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">React &amp; Redux 入坑</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

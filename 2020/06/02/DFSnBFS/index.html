@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>DFS &amp; BFS | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="举一个例子加以说明：leetcode 102 - 二叉树的层次遍历 https://leetcode-cn.com/problems/binary-tree-level-order-traversal/ 🌘深度优先搜索 Depth First Search dfs 递归，回溯 123456789101112131415var levelOrder = function(root) &amp;#123;">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DFS &amp; BFS">
+<meta property="og:url" content="http://www.daluozha.cn/2020/06/02/DFSnBFS/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="举一个例子加以说明：leetcode 102 - 二叉树的层次遍历 https://leetcode-cn.com/problems/binary-tree-level-order-traversal/ 🌘深度优先搜索 Depth First Search dfs 递归，回溯 123456789101112131415var levelOrder = function(root) &amp;#123;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-04-20T09:48:51.709Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DFS &amp; BFS">
+<meta name="twitter:description" content="举一个例子加以说明：leetcode 102 - 二叉树的层次遍历 https://leetcode-cn.com/problems/binary-tree-level-order-traversal/ 🌘深度优先搜索 Depth First Search dfs 递归，回溯 123456789101112131415var levelOrder = function(root) &amp;#123;">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-DFSnBFS" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      DFS &amp; BFS
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>举一个例子加以说明：leetcode 102 - 二叉树的层次遍历 <a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-level-order-traversal/</a></p>
+<h2 id="深度优先搜索-depth-first-search"><a class="header-anchor" href="#深度优先搜索-depth-first-search">🌘</a>深度优先搜索 Depth First Search</h2>
+<p>dfs 递归，回溯</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var levelOrder = function(root) &#123;</span><br><span class="line">    if(!root) return []</span><br><span class="line">    let result = []</span><br><span class="line">    dfs(root, 0, result)</span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function dfs(node, step, result)&#123;</span><br><span class="line">    if(node)&#123;</span><br><span class="line">        if(!result[step]) result[step] = []</span><br><span class="line">        result[step].push(node.val)</span><br><span class="line">        dfs(node.left, step + 1, result)</span><br><span class="line">        dfs(node.right, step + 1, result)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="广度优先搜索-breadth-first-search"><a class="header-anchor" href="#广度优先搜索-breadth-first-search">🌘</a>广度优先搜索 Breadth First Search</h2>
+<p>bfs 维护队列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var levelOrder = function(root) &#123;</span><br><span class="line">    if(!root) return []</span><br><span class="line">    let queue = [root], result = []</span><br><span class="line">    while(queue.length)&#123;</span><br><span class="line">        // 因为队列的长度是动态变化的，所以要将本层要遍历的次数先赋值出来</span><br><span class="line">        let cursize = queue.length, arr = []</span><br><span class="line">        while(cursize)&#123;</span><br><span class="line">            let cur = queue.shift()</span><br><span class="line">            arr.push(cur.val)</span><br><span class="line">            cur.left &amp;&amp; queue.push(cur.left)</span><br><span class="line">            cur.right &amp;&amp; queue.push(cur.right)</span><br><span class="line">            cursize--</span><br><span class="line">        &#125;</span><br><span class="line">        result.push(arr)</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2020/06/02/DFSnBFS/" class="article-date">
+  <time datetime="2020-06-01T16:07:39.000Z" itemprop="datePublished">2020-06-02</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2021/01/22/QnA/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          工作中遇过的问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/24/css-flex/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Flex 布局</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
