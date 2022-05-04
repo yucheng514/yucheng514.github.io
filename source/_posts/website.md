@@ -36,6 +36,7 @@ toc: true
 - <https://zxuqian.cn/ >
 - <https://antfu.me/ > & <https://100.antfu.me/ >
 - <https://yating.world/ >
+- <https://www.leoku.top/ >
 
 ### 学习资料
 
@@ -54,6 +55,7 @@ toc: true
 - 雅思题库 <https://ieltsonlinetests.com >
 - <https://mtc.nofwl.com/ >
 - <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web >
+- 知道创宇研发技能表 <https://rd.readthedocs.io/ >
 
 ### 前端相关
 
