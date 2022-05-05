@@ -6,10 +6,32 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.daluozha.cn/"/>
-  <updated>2022-04-20T09:48:51.709Z</updated>
+  <updated>2022-05-05T15:46:11.229Z</updated>
   <id>http://www.daluozha.cn/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在 vite 中批量导入模块</title>
+    <link href="http://www.daluozha.cn/2022/05/05/%E5%A6%82%E4%BD%95%E5%9C%A8-vite-%E4%B8%AD%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97/"/>
+    <id>http://www.daluozha.cn/2022/05/05/如何在-vite-中批量导入模块/</id>
+    <published>2022-05-05T15:33:42.000Z</published>
+    <updated>2022-05-05T15:46:11.229Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前批量导入用的是</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require.context(directory, useSubdirectories = false, regExp = /^\.\//)</span><br></pre></td></tr></table></figure><p>一共接收三个参数：1.传入搜索的目录 2.一个Boolean值，表示是否加载子目录 3.一个正则表达式</p><p>但在 vite 中不支持使用 require，故改用 <strong>import.meta.glob</strong> 和 <strong>import.meta.globEager</strong></p><blockquote><p>import.meta.glob 为过动态导入，构建时，会分离为独立的 chunk<br>import.meta.globEager 为直接引入</p></blockquote><p>引用来自 &lt;<a href="https://zhuanlan.zhihu.com/p/443175985" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/443175985</a> &gt;</p><p>&lt;<a href="https://juejin.cn/post/6951557699079569422" target="_blank" rel="noopener">https://juejin.cn/post/6951557699079569422</a> &gt;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;之前批量导入用的是&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;cod
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Shell 脚本入门</title>
