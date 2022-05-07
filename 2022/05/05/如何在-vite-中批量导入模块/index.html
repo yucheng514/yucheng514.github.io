@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="luozha">
 <meta property="og:description" content="之前批量导入用的是 1require.context(directory, useSubdirectories = false, regExp = /^\.\//) 一共接收三个参数：1.传入搜索的目录 2.一个Boolean值，表示是否加载子目录 3.一个正则表达式 但在 vite 中不支持使用 require，故改用 import.meta.glob 和 import.meta.globEag">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-05-05T15:46:11.229Z">
+<meta property="og:updated_time" content="2022-05-07T02:17:04.617Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在 vite 中批量导入模块">
 <meta name="twitter:description" content="之前批量导入用的是 1require.context(directory, useSubdirectories = false, regExp = /^\.\//) 一共接收三个参数：1.传入搜索的目录 2.一个Boolean值，表示是否加载子目录 3.一个正则表达式 但在 vite 中不支持使用 require，故改用 import.meta.glob 和 import.meta.globEag">
@@ -27,7 +27,7 @@
 
   
     
-      <body class="dark">
+      <body class="default" style="background-color:#eef0f4;">
     
   
       <div id="container" class="container">
@@ -87,8 +87,15 @@
 <p>import.meta.glob 为过动态导入，构建时，会分离为独立的 chunk<br>
 import.meta.globEager 为直接引入</p>
 </blockquote>
-<p>引用来自 &lt;<a href="https://zhuanlan.zhihu.com/p/443175985" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/443175985</a> &gt;</p>
+<p>参考：</p>
+<ul>
+<li>
+<p>&lt;<a href="https://zhuanlan.zhihu.com/p/443175985" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/443175985</a> &gt;</p>
+</li>
+<li>
 <p>&lt;<a href="https://juejin.cn/post/6951557699079569422" target="_blank" rel="noopener">https://juejin.cn/post/6951557699079569422</a> &gt;</p>
+</li>
+</ul>
 
       
       
