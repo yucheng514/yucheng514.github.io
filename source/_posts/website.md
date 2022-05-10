@@ -115,9 +115,10 @@ toc: true
 - 算法可视化 <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html >
 - 排序算法 <https://www.runoob.com/cprogramming/c-sort-algorithm.html >
 
-### 有意思的仓库
+### 有意思的仓库/文章
 
 - <https://github.com/Kaiyiwing/qwerty-learner >
+- 给研究生的学术建议 <https://psychelzh.github.io/phdrule/index.html >
 
 ### 库 & 框架
 
