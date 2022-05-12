@@ -38,6 +38,7 @@ toc: true
 - <https://yating.world/ >
 - <https://www.leoku.top/ >
 - <https://ashita.top/ >
+- <https://geekplux.com/ >
 
 ### 学习资料
 
@@ -57,6 +58,10 @@ toc: true
 - <https://mtc.nofwl.com/ >
 - <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web >
 - 知道创宇研发技能表 <https://rd.readthedocs.io/ >
+
+### 英文文档
+- <https://fullstackopen.com/en/ >
+- <https://javascript.info/ >
 
 ### 前端相关
 
