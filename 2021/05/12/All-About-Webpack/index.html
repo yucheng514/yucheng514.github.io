@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>All About Webpack | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="🌘path 1path: path.resolve(__dirname, &amp;apos;dist&amp;apos;) path.join() path.resolve() 方法将路径或路径片段的序列解析为绝对路径。 详见 &amp;lt;http://nodejs.cn/api/path/path_resolve_paths.html &amp;gt; __dirname 详见 &amp;lt;http://nodejs.cn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="All About Webpack">
+<meta property="og:url" content="http://www.daluozha.cn/2021/05/12/All-About-Webpack/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="🌘path 1path: path.resolve(__dirname, &amp;apos;dist&amp;apos;) path.join() path.resolve() 方法将路径或路径片段的序列解析为绝对路径。 详见 &amp;lt;http://nodejs.cn/api/path/path_resolve_paths.html &amp;gt; __dirname 详见 &amp;lt;http://nodejs.cn">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-05-12T10:09:21.547Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="All About Webpack">
+<meta name="twitter:description" content="🌘path 1path: path.resolve(__dirname, &amp;apos;dist&amp;apos;) path.join() path.resolve() 方法将路径或路径片段的序列解析为绝对路径。 详见 &amp;lt;http://nodejs.cn/api/path/path_resolve_paths.html &amp;gt; __dirname 详见 &amp;lt;http://nodejs.cn">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-All-About-Webpack" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      All About Webpack
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h3 id="path"><a class="header-anchor" href="#path">🌘</a>path</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path: path.resolve(__dirname, &apos;dist&apos;)</span><br></pre></td></tr></table></figure>
+<p>path.join()<br>
+path.resolve() 方法将路径或路径片段的序列解析为绝对路径。<br>
+详见 &lt;<a href="http://nodejs.cn/api/path/path_resolve_paths.html" target="_blank" rel="noopener">http://nodejs.cn/api/path/path_resolve_paths.html</a> &gt;<br>
+__dirname 详见 &lt;<a href="http://nodejs.cn/api/modules/dirname.html" target="_blank" rel="noopener">http://nodejs.cn/api/modules/dirname.html</a> &gt;</p>
+<h3 id="webpack-优化策略"><a class="header-anchor" href="#webpack-优化策略">🌘</a>Webpack 优化策略</h3>
+<ol>
+<li>优化 loader 配置</li>
+</ol>
+<ul>
+<li>优化正则匹配</li>
+<li>通过 cacheDirectory 选项开启缓存</li>
+<li>通过 include、exclude 来减少被处理的文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: /\.js$/,</span><br><span class="line">      loader: &apos;babel-loader?cacheDirectory&apos;,</span><br><span class="line">      include: [resolve(&apos;src&apos;)]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>比较实用的方法:</li>
+</ol>
+<ul>
+<li>按需加载，优化 loader 配置，关闭生产环境的sourceMap，CDN优化。</li>
+<li>vue-cli 已做的优化： 代码压缩，提取公共代码，再优化空间不大。</li>
+<li>根据项目实际需要和自身开发水平选择优化方法，必须避免因为优化产生 bug</li>
+</ul>
+<p>&lt;<a href="https://juejin.cn/post/6844904004825120782" target="_blank" rel="noopener">https://juejin.cn/post/6844904004825120782</a> &gt;</p>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2021/05/12/All-About-Webpack/" class="article-date">
+  <time datetime="2021-05-12T08:40:48.000Z" itemprop="datePublished">2021-05-12</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2021/05/24/website/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          一些门钥匙
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/22/QnA/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">工作中遇过的问题</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

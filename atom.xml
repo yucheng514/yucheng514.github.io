@@ -174,20 +174,20 @@
   </entry>
   
   <entry>
-    <title>FE 基础知识</title>
-    <link href="http://www.daluozha.cn/2021/05/11/FE-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>http://www.daluozha.cn/2021/05/11/FE-基础知识/</id>
-    <published>2021-05-10T17:30:47.000Z</published>
-    <updated>2022-05-11T07:17:10.501Z</updated>
+    <title>All About Webpack</title>
+    <link href="http://www.daluozha.cn/2021/05/12/All-About-Webpack/"/>
+    <id>http://www.daluozha.cn/2021/05/12/All-About-Webpack/</id>
+    <published>2021-05-12T08:40:48.000Z</published>
+    <updated>2022-05-12T10:09:21.547Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="html-文档加载过程"><a class="header-anchor" href="#html-文档加载过程">🌘</a>HTML 文档加载过程</h2><p>&lt;<a href="https://www.jianshu.com/p/16435ba1b32e" target="_blank" rel="noopener">https://www.jianshu.com/p/16435ba1b32e</a> &gt;</p><h2 id="事件模型"><a class="header-anchor" href="#事件模型">🌘</a>事件模型</h2><p>&lt;<a href="https://www.jianshu.com/p/dcee13943ede" target="_blank" rel="noopener">https://www.jianshu.com/p/dcee13943ede</a> &gt;<br>&lt;<a href="https://segmentfault.com/a/1190000018977590" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018977590</a> &gt;</p><h2 id="uri-和-url-的区别"><a class="header-anchor" href="#uri-和-url-的区别">🌘</a>URI 和 URL 的区别</h2><p>&lt;<a href="https://www.zhihu.com/question/21950864" target="_blank" rel="noopener">https://www.zhihu.com/question/21950864</a> &gt;</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="path"><a class="header-anchor" href="#path">🌘</a>path</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path: path.resolve(__dirname, &apos;dist&apos;)</span><br></pre></td></tr></table></figure><p>path.join()<br>path.resolve() 方法将路径或路径片段的序列解析为绝对路径。<br>详见 &lt;<a href="http://nodejs.cn/api/path/path_resolve_paths.html" target="_blank" rel="noopener">http://nodejs.cn/api/path/path_resolve_paths.html</a> &gt;<br>__dirname 详见 &lt;<a href="http://nodejs.cn/api/modules/dirname.html" target="_blank" rel="noopener">http://nodejs.cn/api/modules/dirname.html</a> &gt;</p><h3 id="webpack-优化策略"><a class="header-anchor" href="#webpack-优化策略">🌘</a>Webpack 优化策略</h3><ol><li>优化 loader 配置</li></ol><ul><li>优化正则匹配</li><li>通过 cacheDirectory 选项开启缓存</li><li>通过 include、exclude 来减少被处理的文件</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: /\.js$/,</span><br><span class="line">      loader: &apos;babel-loader?cacheDirectory&apos;,</span><br><span class="line">      include: [resolve(&apos;src&apos;)]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>比较实用的方法:</li></ol><ul><li>按需加载，优化 loader 配置，关闭生产环境的sourceMap，CDN优化。</li><li>vue-cli 已做的优化： 代码压缩，提取公共代码，再优化空间不大。</li><li>根据项目实际需要和自身开发水平选择优化方法，必须避免因为优化产生 bug</li></ul><p>&lt;<a href="https://juejin.cn/post/6844904004825120782" target="_blank" rel="noopener">https://juejin.cn/post/6844904004825120782</a> &gt;</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;html-文档加载过程&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#html-文档加载过程&quot;&gt;🌘&lt;/a&gt;HTML 文档加载过程&lt;/h2&gt;
-&lt;p&gt;&amp;lt;&lt;a href=&quot;https://www.jianshu.com/p/16435ba1b
+        &lt;h3 id=&quot;path&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#path&quot;&gt;🌘&lt;/a&gt;path&lt;/h3&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
       
     
     </summary>
@@ -290,6 +290,28 @@
     
     
       <category term="CSS3" scheme="http://www.daluozha.cn/tags/CSS3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FE 基础知识</title>
+    <link href="http://www.daluozha.cn/2020/05/11/FE-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>http://www.daluozha.cn/2020/05/11/FE-基础知识/</id>
+    <published>2020-05-10T17:30:47.000Z</published>
+    <updated>2022-05-12T08:41:04.204Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="html-文档加载过程"><a class="header-anchor" href="#html-文档加载过程">🌘</a>HTML 文档加载过程</h2><p>&lt;<a href="https://www.jianshu.com/p/16435ba1b32e" target="_blank" rel="noopener">https://www.jianshu.com/p/16435ba1b32e</a> &gt;</p><h2 id="事件模型"><a class="header-anchor" href="#事件模型">🌘</a>事件模型</h2><p>&lt;<a href="https://www.jianshu.com/p/dcee13943ede" target="_blank" rel="noopener">https://www.jianshu.com/p/dcee13943ede</a> &gt;<br>&lt;<a href="https://segmentfault.com/a/1190000018977590" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018977590</a> &gt;</p><h2 id="uri-和-url-的区别"><a class="header-anchor" href="#uri-和-url-的区别">🌘</a>URI 和 URL 的区别</h2><p>&lt;<a href="https://www.zhihu.com/question/21950864" target="_blank" rel="noopener">https://www.zhihu.com/question/21950864</a> &gt;</p><h2 id="手写题"><a class="header-anchor" href="#手写题">🌘</a>手写题</h2><ul><li>手写instanceof</li><li>实现数组的map方法</li><li>reduce实现数组的map方法</li><li>手写数组的reduce方法</li><li>数组扁平化</li><li>函数柯里化</li><li>浅拷贝实现</li><li>深拷贝实现</li><li>手写call/apply/bind</li><li>手动实现new</li><li>手写promise(常考promise.all, promise.race))</li><li>手写原生AJAX</li><li>手写节流防抖函数</li><li>手写Promise加载图片</li><li>实现事件订阅发布(eventBus)</li></ul><p>&lt;<a href="https://daijl.cn/51568/" target="_blank" rel="noopener">https://daijl.cn/51568/</a> &gt;<br>&lt;<a href="https://daijl.cn/39558/" target="_blank" rel="noopener">https://daijl.cn/39558/</a> &gt;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;html-文档加载过程&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#html-文档加载过程&quot;&gt;🌘&lt;/a&gt;HTML 文档加载过程&lt;/h2&gt;
+&lt;p&gt;&amp;lt;&lt;a href=&quot;https://www.jianshu.com/p/16435ba1b
+      
+    
+    </summary>
+    
     
   </entry>
   
