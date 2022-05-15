@@ -39,6 +39,7 @@ toc: true
 - <https://www.leoku.top/ >
 - <https://ashita.top/ >
 - <https://geekplux.com/ >
+- <https://jaapgrolleman.com/on-china/ >
 
 ### 学习资料
 
@@ -152,6 +153,7 @@ toc: true
 - <https://www.allhistory.com/ >
 - <https://rpdc.xiaohongshu.com/52-design-principles >
 - Lorem Ipsum <https://www.lipsum.com/ >
+- <https://js1k.com/ >
 
 ### 社区 & 论坛
 
