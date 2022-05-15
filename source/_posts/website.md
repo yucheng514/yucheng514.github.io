@@ -168,10 +168,7 @@ toc: true
 
 ### 前端团队
 
-- 淘宝前端团队 (FED) <https://fed.taobao.org/>
-- FEX 百度前端研发部 <http://fex.baidu.com/ >
 - Alloy Team 腾讯 Web 前端团队 <http://www.alloyteam.com/ >
-- 360 集团奇舞团 <https://75team.com/ >
 - 京东凹凸实验室 <https://aotu.io/ >
 - 美团技术团队 <https://tech.meituan.com/ >
 - 蚂蚁体验科技 <https://xcloud.alipay.com/ >
