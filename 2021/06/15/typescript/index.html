@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="luozha">
 <meta property="og:description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型     类型 例子 描述     number 1, -33, 2.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-05-20T14:57:50.284Z">
+<meta property="og:updated_time" content="2022-05-20T17:23:03.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeScript 学习参考">
 <meta name="twitter:description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型     类型 例子 描述     number 1, -33, 2.">
@@ -167,6 +167,8 @@
 </tbody>
 </table>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 直接使用字面量进行类型声明</span><br><span class="line">let person : &quot;male&quot; | &quot;female&quot; // 联合类型</span><br></pre></td></tr></table></figure>
+<p>构造器的一个语法糖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    constructor(public name: string, public age: number) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 等价于</span><br><span class="line">class Person &#123;</span><br><span class="line">    name: string</span><br><span class="line">    age: number</span><br><span class="line">    constructor(name: string, age: number) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="interface-和-type-区别"><a class="header-anchor" href="#interface-和-type-区别">🌘</a>interface 和 type 区别</h3>
 <p>一句话总结：能用 interface 就用 interface，不行再用 type<br>
 详见 &lt;<a href="https://juejin.cn/post/6844903749501059085" target="_blank" rel="noopener">https://juejin.cn/post/6844903749501059085</a> &gt;</p>
