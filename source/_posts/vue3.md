@@ -29,5 +29,4 @@ new Proxy(data, {
 
 ### sth else
 - setup scripts : <https://fe-blog.workplus.io/vue3-script-setup >
-- 选项式 vs 组合式
-- 
+- 选项式 vs 组合式: <https://vuejs.org/guide/introduction.html#api-styles >
