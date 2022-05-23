@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="luozha">
 <meta property="og:description" content="🌘分支获取另一分支的更新 以xxx分支获取master的更新为例：  git checkout master git pull git checkout xxx（自己的分支 git merge master git push origin xxx  🌘Ambiguous 警告 跟v1.1.0合并的时候遇到了:  warning: refname ‘v1.1.0’ is ambiguous. S">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-04-20T09:48:51.709Z">
+<meta property="og:updated_time" content="2022-05-23T12:34:44.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 学习">
 <meta name="twitter:description" content="🌘分支获取另一分支的更新 以xxx分支获取master的更新为例：  git checkout master git pull git checkout xxx（自己的分支 git merge master git push origin xxx  🌘Ambiguous 警告 跟v1.1.0合并的时候遇到了:  warning: refname ‘v1.1.0’ is ambiguous. S">
@@ -133,6 +133,23 @@ Switched to branch ‘v1.1.0’</p>
 <li>在本地新建分支 x，但是不会自动切换到该本地分支 x，需要手动 checkout。</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin 远程分支名x:本地分支名x</span><br></pre></td></tr></table></figure>
+<h3 id="fork-后如何同步源的新更新内容"><a class="header-anchor" href="#fork-后如何同步源的新更新内容">🌘</a>fork 后如何同步源的新更新内容</h3>
+<ol>
+<li>添加上游仓库</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream https://github.com/a/b.git</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>拉取上游变动</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>合并（可用 merge 但是会有一条 commit）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase upstream/main</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>更新自己的远端仓库分支</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
 <h3 id="设定-upstream"><a class="header-anchor" href="#设定-upstream">🌘</a>设定 upstream</h3>
 <ul>
 <li>-u 等同于 --set-upstream</li>

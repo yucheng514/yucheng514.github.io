@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="luozha">
 <meta property="og:description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型  🌘typescript 各大类型    类型 例子 描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-05-20T17:42:02.514Z">
+<meta property="og:updated_time" content="2022-05-22T17:20:26.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeScript 学习参考">
 <meta name="twitter:description" content="🌘为什么要使用 TypeScript  类型推演与类型匹配 开发编译时报错 极大程度的避免了低级错误 支持 JavaScript 最新特性(包含 ES 6/7/8)  🌘What’s new ?  元组 interface 接口 类型推论、联合类型、类型断言 枚举 Enum 范型 Generics 类型别名、字面量、交叉类型  🌘typescript 各大类型    类型 例子 描述">
@@ -185,6 +185,14 @@
 <li>在类中的用法：</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Person&lt;T&gt;&#123;</span><br><span class="line">    name: T</span><br><span class="line">    constructor(name: T) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const person = new Person&lt;string&gt;(&apos;luozha&apos;)</span><br></pre></td></tr></table></figure>
+<h3 id="相关问题"><a class="header-anchor" href="#相关问题">🌘</a>相关问题</h3>
+<ul>
+<li>说说什么 Typescript 中的泛型？从你的理解来说，它的作用是什么？<br>
+泛型代表的是泛指某一类型，更像是一个类型变量。由尖括号包裹 <t>。<br>
+主要作用是创建逻辑可复用的组件。<br>
+泛型可以作用在函数、类、接口上。</t></li>
+</ul>
+
       
       
     </div>
