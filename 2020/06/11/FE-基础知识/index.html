@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>FE 基础知识 | luozha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="🌘HTML 文档加载过程 &amp;lt;https://www.jianshu.com/p/16435ba1b32e &amp;gt; 🌘事件模型 &amp;lt;https://www.jianshu.com/p/dcee13943ede &amp;gt; &amp;lt;https://segmentfault.com/a/1190000018977590 &amp;gt; 🌘URI 和 URL 的区别 &amp;lt;https://ww">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FE 基础知识">
+<meta property="og:url" content="http://www.daluozha.cn/2020/06/11/FE-基础知识/index.html">
+<meta property="og:site_name" content="luozha">
+<meta property="og:description" content="🌘HTML 文档加载过程 &amp;lt;https://www.jianshu.com/p/16435ba1b32e &amp;gt; 🌘事件模型 &amp;lt;https://www.jianshu.com/p/dcee13943ede &amp;gt; &amp;lt;https://segmentfault.com/a/1190000018977590 &amp;gt; 🌘URI 和 URL 的区别 &amp;lt;https://ww">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-05-23T18:57:36.519Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FE 基础知识">
+<meta name="twitter:description" content="🌘HTML 文档加载过程 &amp;lt;https://www.jianshu.com/p/16435ba1b32e &amp;gt; 🌘事件模型 &amp;lt;https://www.jianshu.com/p/dcee13943ede &amp;gt; &amp;lt;https://segmentfault.com/a/1190000018977590 &amp;gt; 🌘URI 和 URL 的区别 &amp;lt;https://ww">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/daluozha/MyPostImage/master/fav1.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body class="dark">
+    
+  
+      <div id="container" class="container">
+        <article id="post-FE-基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname"></h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h3 class="article-title" itemprop="name">
+      FE 基础知识
+    </h3>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h2 id="html-文档加载过程"><a class="header-anchor" href="#html-文档加载过程">🌘</a>HTML 文档加载过程</h2>
+<p>&lt;<a href="https://www.jianshu.com/p/16435ba1b32e" target="_blank" rel="noopener">https://www.jianshu.com/p/16435ba1b32e</a> &gt;</p>
+<h2 id="事件模型"><a class="header-anchor" href="#事件模型">🌘</a>事件模型</h2>
+<p>&lt;<a href="https://www.jianshu.com/p/dcee13943ede" target="_blank" rel="noopener">https://www.jianshu.com/p/dcee13943ede</a> &gt;<br>
+&lt;<a href="https://segmentfault.com/a/1190000018977590" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018977590</a> &gt;</p>
+<h2 id="uri-和-url-的区别"><a class="header-anchor" href="#uri-和-url-的区别">🌘</a>URI 和 URL 的区别</h2>
+<p>&lt;<a href="https://www.zhihu.com/question/21950864" target="_blank" rel="noopener">https://www.zhihu.com/question/21950864</a> &gt;</p>
+<h2 id="es6-模块与-commonjs-模块的差异"><a class="header-anchor" href="#es6-模块与-commonjs-模块的差异">🌘</a>ES6 模块与 CommonJS 模块的差异</h2>
+<p>&lt;<a href="https://wangdoc.com/es6/module-loader.html" target="_blank" rel="noopener">https://wangdoc.com/es6/module-loader.html</a> &gt;</p>
+<h2 id="事件循环-event-loop"><a class="header-anchor" href="#事件循环-event-loop">🌘</a>事件循环(Event Loop)</h2>
+<ul>
+<li>一开始整个脚本作为一个宏任务执行</li>
+<li>执行过程中同步代码直接执行，宏任务进入宏任务队列，微任务进入微任务队列</li>
+<li>当前宏任务执行完出队，检查微任务列表，有则依次执行，直到全部执行完</li>
+<li>执行浏览器 UI 线程的渲染工作</li>
+<li>检查是否有 Web Worker 任务，有则执行</li>
+<li>执行完本轮的宏任务，回到2，依此循环，直到宏任务和微任务队列都为空</li>
+</ul>
+<p>微任务包括：MutationObserver、Promise.then() 或 catch()、Promise 为基础开发的其它技术，比如 fetch API、V8 的垃圾回收过程、Node 独有的 process.nextTick。</p>
+<p>宏任务包括：script 、setTimeout、setInterval 、setImmediate 、I/O 、UI rendering。</p>
+<p>在所有任务开始的时候，由于宏任务中包括了 script，所以浏览器会先执行一个宏任务，在这个过程中你看到的延迟任务(例如 setTimeout )将被放到下一轮宏任务中来执行。</p>
+<p>参考&lt;<a href="https://github.com/i-want-offer/questions_collection/blob/master/promise%E9%A2%98%E7%9B%AE/45%E9%81%93Promise%E9%A2%98%E7%9B%AE.md" target="_blank" rel="noopener">https://github.com/i-want-offer/questions_collection/blob/master/promise题目/45道Promise题目.md</a> &gt;</p>
+<h2 id="从输入-url-到页面加载完成的过程中都发生了什么事情"><a class="header-anchor" href="#从输入-url-到页面加载完成的过程中都发生了什么事情">🌘</a>从输入 URL 到页面加载完成的过程中都发生了什么事情</h2>
+<ol>
+<li>DNS 解析：域名地址 -&gt; IP (依次读取浏览器、系统、路由器、网络运营商的 DNS 缓存)<br>
+解析过程：递归搜索 <strong>.</strong> -&gt; <strong>.com.</strong> -&gt; <strong>.google.com.</strong> -&gt; <strong><a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>.</strong><br>
+相关概念：DNS 优化、DNS 缓存、DNS 负载均衡</li>
+<li>TCP 连接 (TCP 三次握手)</li>
+<li>发送 HTTP 请求
+<ul>
+<li>请求报文：HTTP 协议的请求报文</li>
+</ul>
+</li>
+<li>服务器处理请求
+<ul>
+<li>响应报文</li>
+</ul>
+</li>
+<li>浏览器渲染页面
+<ol>
+<li>遇见 HTML 标记，浏览器调用 HTML 解析器解析成 Token 并构建成 dom 树</li>
+<li>遇见 style/link 标记，浏览器调用 css 解析器，处理 css 标记并构建 cssom 树</li>
+<li>遇见 script 标记，调用 javascript 解析器，处理 script 代码（绑定事件，修改 dom 树/ cssom 树）</li>
+<li>将 dom 树和 cssom 树合并成一个渲染树</li>
+<li>根据渲染树来计算布局，计算每个节点的几何信息（布局</li>
+<li>将各个节点颜色绘制到屏幕上（渲染</li>
+</ol>
+</li>
+<li>断开连接 (TCP 四次挥手)</li>
+</ol>
+<p>【注意】前五个步骤不一定按照顺序执行，如果 dom 树或 cssom 树被修改了，可能会执行多次布局和渲染。往往在实际页面中，这前五个步骤都会执行多次。</p>
+<h2 id="tcp-三次握手-四次挥手"><a class="header-anchor" href="#tcp-三次握手-四次挥手">🌘</a>TCP 三次握手 &amp; 四次挥手</h2>
+<ul>
+<li>三次握手
+<ol>
+<li>客户端发送连接请求到服务端</li>
+<li>服务端返回确认</li>
+<li>客户端发送确认连接</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>四次挥手（可参考&lt;<a href="https://www.bilibili.com/video/BV1nb411P7tQ?p=16&amp;t=974.7" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1nb411P7tQ?p=16&amp;t=974.7</a> &gt;
+<ol>
+<li>客户端 A 发送连接关闭 A -&gt; B 到服务端 B</li>
+<li>服务端返回确认</li>
+<li>服务端发送连接关闭 B -&gt; A 到客户端</li>
+<li>客户端发送确认，服务端收到就关闭，客户端等待一段时间也关闭</li>
+</ol>
+</li>
+</ul>
+<h3 id="手写题"><a class="header-anchor" href="#手写题">🌘</a>手写题</h3>
+<ul>
+<li>手写instanceof</li>
+<li>实现数组的map方法</li>
+<li>reduce实现数组的map方法</li>
+<li>手写数组的reduce方法</li>
+<li>数组扁平化</li>
+<li>函数柯里化</li>
+<li>浅拷贝实现</li>
+<li>深拷贝实现</li>
+<li>手写call/apply/bind</li>
+<li>手动实现new</li>
+<li>手写promise(常考promise.all, promise.race))</li>
+<li>手写原生AJAX</li>
+<li>手写节流防抖函数</li>
+<li>手写Promise加载图片</li>
+<li>实现事件订阅发布(eventBus)</li>
+</ul>
+<p>&lt;<a href="https://daijl.cn/51568/" target="_blank" rel="noopener">https://daijl.cn/51568/</a> &gt;<br>
+&lt;<a href="https://daijl.cn/39558/" target="_blank" rel="noopener">https://daijl.cn/39558/</a> &gt;</p>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2020/06/11/FE-基础知识/" class="article-date">
+  <time datetime="2020-06-10T17:30:47.000Z" itemprop="datePublished">2020-06-11</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2021/01/22/QnA/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          工作中遇过的问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/02/DFSnBFS/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DFS &amp; BFS</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <img src="https://s1.hdslb.com/bfs/seed/bplus-common/dynamic-assets/end.png">
+
+      </div>
+    </footer>
+<!--    Copyright  &copy; 2018-2022  luozha  --!>
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
