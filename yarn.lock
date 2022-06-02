@@ -1052,14 +1052,14 @@
 
 "hexo-renderer-pug@^1.0.0":
   "integrity" "sha512-lzTSZvPxInGsYJGpv8Z9TQ0n1ZWI6fuSbtyvRmX5tloWPQNNdBhlDIlOsSc2KYQ28QOGuti8GkJ0wPBqLeKf8A=="
-  "resolved" "https://registry.npmjs.org/hexo-renderer-pug/-/hexo-renderer-pug-1.0.0.tgz"
+  "resolved" "https://registry.npmmirror.com/hexo-renderer-pug/-/hexo-renderer-pug-1.0.0.tgz"
   "version" "1.0.0"
   dependencies:
     "pug" "^2.0.1"
 
 "hexo-renderer-sass@^0.4.0":
   "integrity" "sha512-goQ/r8J/2s5XnIp+dSDwWgaxHl6h/VVEsp95Jr/+sYqFfXHXDIC4evC+V1to9ezfQwOS//ZZFQptTZIKTuh8Lg=="
-  "resolved" "https://registry.npmjs.org/hexo-renderer-sass/-/hexo-renderer-sass-0.4.0.tgz"
+  "resolved" "https://registry.npmmirror.com/hexo-renderer-sass/-/hexo-renderer-sass-0.4.0.tgz"
   "version" "0.4.0"
   dependencies:
     "node-sass" "^4.5.3"
