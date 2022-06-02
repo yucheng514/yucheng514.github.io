@@ -12,16 +12,29 @@ tags:
 <https://www.jianshu.com/p/dcee13943ede >
 <https://segmentfault.com/a/1190000018977590 >
 
+## 浏览器的回流与重绘
+
+<https://juejin.cn/post/6844903569087266823 >
+
 ##  URI 和 URL 的区别
 
 <https://www.zhihu.com/question/21950864 >
+
+## 原型链
+
+<https://juejin.cn/post/6844903989088092174 >
+<https://www.seozen.top/javascript-object-prototypes-chain.html >
 
 ## ES6 模块与 CommonJS 模块的差异
 
 <https://wangdoc.com/es6/module-loader.html >
 
 ## 什么是跨域？解决跨域的办法有哪些？
+
 <https://www.bilibili.com/video/BV1nb411P7tQ?p=14&t=61.4 >
+
+## npm yarn cnpm pnpm
+<https://blog.csdn.net/qq_32614411/article/details/80894605 >
 
 ## 事件循环(Event Loop)
 
