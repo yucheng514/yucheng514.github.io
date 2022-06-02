@@ -36,6 +36,10 @@ toc: true
 - <https://zxuqian.cn/ >
 - <https://antfu.me/ > & <https://100.antfu.me/ >
 - <https://yating.world/ >
+- <https://www.leoku.top/ >
+- <https://ashita.top/ >
+- <https://geekplux.com/ >
+- <https://jaapgrolleman.com/on-china/ >
 
 ### 学习资料
 
@@ -54,6 +58,11 @@ toc: true
 - 雅思题库 <https://ieltsonlinetests.com >
 - <https://mtc.nofwl.com/ >
 - <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web >
+- 知道创宇研发技能表 <https://rd.readthedocs.io/ >
+
+### 英文文档
+- <https://fullstackopen.com/en/ >
+- <https://javascript.info/ >
 
 ### 前端相关
 
@@ -69,6 +78,7 @@ toc: true
 - CSS 秘密花园 <http://www.csszengarden.com/ > 
 - TGideas文档库 <https://tgideas.qq.com/doc/index.html >
 - Vue 源码 <https://vue-js.com/learn-vue/ >
+- <https://pengfeixc.com/tutorial/css/introduction >
 
 ### JavaScript
 
@@ -112,9 +122,10 @@ toc: true
 - 算法可视化 <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html >
 - 排序算法 <https://www.runoob.com/cprogramming/c-sort-algorithm.html >
 
-### 有意思的仓库
+### 有意思的仓库/文章
 
 - <https://github.com/Kaiyiwing/qwerty-learner >
+- 给研究生的学术建议 <https://psychelzh.github.io/phdrule/index.html >
 
 ### 库 & 框架
 
@@ -143,6 +154,7 @@ toc: true
 - <https://www.allhistory.com/ >
 - <https://rpdc.xiaohongshu.com/52-design-principles >
 - Lorem Ipsum <https://www.lipsum.com/ >
+- <https://js1k.com/ >
 
 ### 社区 & 论坛
 
@@ -157,10 +169,7 @@ toc: true
 
 ### 前端团队
 
-- 淘宝前端团队 (FED) <https://fed.taobao.org/>
-- FEX 百度前端研发部 <http://fex.baidu.com/ >
 - Alloy Team 腾讯 Web 前端团队 <http://www.alloyteam.com/ >
-- 360 集团奇舞团 <https://75team.com/ >
 - 京东凹凸实验室 <https://aotu.io/ >
 - 美团技术团队 <https://tech.meituan.com/ >
 - 蚂蚁体验科技 <https://xcloud.alipay.com/ >

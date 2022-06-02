@@ -69,6 +69,24 @@ git checkout -b 本地分支名x origin/远程分支名x
 git fetch origin 远程分支名x:本地分支名x
 ```
 
+### fork 后如何同步源的新更新内容
+1. 添加上游仓库
+```
+git remote add upstream https://github.com/a/b.git
+```
+2. 拉取上游变动
+```
+git fetch upstream
+```
+3. 合并（可用 merge 但是会有一条 commit）
+```
+git rebase upstream/main
+```
+4. 更新自己的远端仓库分支
+```
+git push origin main
+```
+
 ### 设定 upstream
 - -u 等同于 --set-upstream
 - 例子：
