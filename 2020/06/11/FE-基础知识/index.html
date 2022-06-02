@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>FE 基础知识 | - luozha -</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><div class="darkmode-toggle">🌓</div><script>var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+var toggle = document.querySelector('.darkmode-toggle');
+var html = document.querySelector('html');
+
+html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
+
+toggle.addEventListener('click', () => {
+localStorage.dark = !(html.dataset.dark == 'true');
+html.dataset.dark = localStorage.dark;
+});</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">FE 基础知识</h1><a id="logo" href="/.">- luozha -</a><p class="description">命数如织 当为磐石</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">FE 基础知识</h1><div class="post-meta">2020-06-11<span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 4</span><span class="post-meta-item-text"> 分钟</span></span></span></div><div class="post-content"><h2 id="HTML-文档加载过程"><a href="#HTML-文档加载过程" class="headerlink" title="HTML 文档加载过程"></a>HTML 文档加载过程</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/16435ba1b32e">https://www.jianshu.com/p/16435ba1b32e</a> &gt;</p>
+<h2 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dcee13943ede">https://www.jianshu.com/p/dcee13943ede</a> &gt;<br>&lt;<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018977590">https://segmentfault.com/a/1190000018977590</a> &gt;</p>
+<h2 id="浏览器的回流与重绘"><a href="#浏览器的回流与重绘" class="headerlink" title="浏览器的回流与重绘"></a>浏览器的回流与重绘</h2><p>&lt;<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903569087266823">https://juejin.cn/post/6844903569087266823</a> &gt;</p>
+<h2 id="URI-和-URL-的区别"><a href="#URI-和-URL-的区别" class="headerlink" title="URI 和 URL 的区别"></a>URI 和 URL 的区别</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21950864">https://www.zhihu.com/question/21950864</a> &gt;</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>&lt;<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903989088092174">https://juejin.cn/post/6844903989088092174</a> &gt;<br>&lt;<a target="_blank" rel="noopener" href="https://www.seozen.top/javascript-object-prototypes-chain.html">https://www.seozen.top/javascript-object-prototypes-chain.html</a> &gt;</p>
+<h2 id="ES6-模块与-CommonJS-模块的差异"><a href="#ES6-模块与-CommonJS-模块的差异" class="headerlink" title="ES6 模块与 CommonJS 模块的差异"></a>ES6 模块与 CommonJS 模块的差异</h2><p>&lt;<a target="_blank" rel="noopener" href="https://wangdoc.com/es6/module-loader.html">https://wangdoc.com/es6/module-loader.html</a> &gt;</p>
+<h2 id="什么是跨域？解决跨域的办法有哪些？"><a href="#什么是跨域？解决跨域的办法有哪些？" class="headerlink" title="什么是跨域？解决跨域的办法有哪些？"></a>什么是跨域？解决跨域的办法有哪些？</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nb411P7tQ?p=14&amp;t=61.4">https://www.bilibili.com/video/BV1nb411P7tQ?p=14&amp;t=61.4</a> &gt;</p>
+<h2 id="npm-yarn-cnpm-pnpm"><a href="#npm-yarn-cnpm-pnpm" class="headerlink" title="npm yarn cnpm pnpm"></a>npm yarn cnpm pnpm</h2><p>&lt;<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32614411/article/details/80894605">https://blog.csdn.net/qq_32614411/article/details/80894605</a> &gt;</p>
+<h2 id="事件循环-Event-Loop"><a href="#事件循环-Event-Loop" class="headerlink" title="事件循环(Event Loop)"></a>事件循环(Event Loop)</h2><ul>
+<li>一开始整个脚本作为一个宏任务执行</li>
+<li>执行过程中同步代码直接执行，宏任务进入宏任务队列，微任务进入微任务队列</li>
+<li>当前宏任务执行完出队，检查微任务列表，有则依次执行，直到全部执行完</li>
+<li>执行浏览器 UI 线程的渲染工作</li>
+<li>检查是否有 Web Worker 任务，有则执行</li>
+<li>执行完本轮的宏任务，回到2，依此循环，直到宏任务和微任务队列都为空</li>
+</ul>
+<p>微任务包括：MutationObserver、Promise.then() 或 catch()、Promise 为基础开发的其它技术，比如 fetch API、V8 的垃圾回收过程、Node 独有的 process.nextTick。</p>
+<p>宏任务包括：script 、setTimeout、setInterval 、setImmediate 、I/O 、UI rendering。</p>
+<p>在所有任务开始的时候，由于宏任务中包括了 script，所以浏览器会先执行一个宏任务，在这个过程中你看到的延迟任务(例如 setTimeout )将被放到下一轮宏任务中来执行。</p>
+<p>参考&lt;<a target="_blank" rel="noopener" href="https://github.com/i-want-offer/questions_collection/blob/master/promise%E9%A2%98%E7%9B%AE/45%E9%81%93Promise%E9%A2%98%E7%9B%AE.md">https://github.com/i-want-offer/questions_collection/blob/master/promise%E9%A2%98%E7%9B%AE/45%E9%81%93Promise%E9%A2%98%E7%9B%AE.md</a> &gt;</p>
+<h2 id="从输入-URL-到页面加载完成的过程中都发生了什么事情"><a href="#从输入-URL-到页面加载完成的过程中都发生了什么事情" class="headerlink" title="从输入 URL 到页面加载完成的过程中都发生了什么事情"></a>从输入 URL 到页面加载完成的过程中都发生了什么事情</h2><ol>
+<li>DNS 解析：域名地址 -&gt; IP (依次读取浏览器、系统、路由器、网络运营商的 DNS 缓存)<br>解析过程：递归搜索 <strong>.</strong> -&gt; <strong>.com.</strong> -&gt; <strong>.google.com.</strong> -&gt; <strong><a target="_blank" rel="noopener" href="http://www.google.com/">www.google.com</a>.</strong><br>相关概念：DNS 优化、DNS 缓存、DNS 负载均衡</li>
+<li>TCP 连接 (TCP 三次握手)</li>
+<li>发送 HTTP 请求<ul>
+<li>请求报文：HTTP 协议的请求报文</li>
+</ul>
+</li>
+<li>服务器处理请求<ul>
+<li>响应报文</li>
+</ul>
+</li>
+<li>浏览器渲染页面<ol>
+<li>遇见 HTML 标记，浏览器调用 HTML 解析器解析成 Token 并构建成 dom 树</li>
+<li>遇见 style/link 标记，浏览器调用 css 解析器，处理 css 标记并构建 cssom 树</li>
+<li>遇见 script 标记，调用 javascript 解析器，处理 script 代码（绑定事件，修改 dom 树/ cssom 树）</li>
+<li>将 dom 树和 cssom 树合并成一个渲染树</li>
+<li>根据渲染树来计算布局，计算每个节点的几何信息（布局</li>
+<li>将各个节点颜色绘制到屏幕上（渲染</li>
+</ol>
+</li>
+<li>断开连接 (TCP 四次挥手)</li>
+</ol>
+<p>【注意】前五个步骤不一定按照顺序执行，如果 dom 树或 cssom 树被修改了，可能会执行多次布局和渲染。往往在实际页面中，这前五个步骤都会执行多次。</p>
+<h2 id="TCP-三次握手-amp-四次挥手"><a href="#TCP-三次握手-amp-四次挥手" class="headerlink" title="TCP 三次握手 &amp; 四次挥手"></a>TCP 三次握手 &amp; 四次挥手</h2><ul>
+<li>三次握手<ol>
+<li>客户端发送连接请求到服务端</li>
+<li>服务端返回确认</li>
+<li>客户端发送确认连接</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>四次挥手（可参考&lt;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nb411P7tQ?p=16&amp;t=974.7">https://www.bilibili.com/video/BV1nb411P7tQ?p=16&amp;t=974.7</a> &gt;<ol>
+<li>客户端 A 发送连接关闭 A -&gt; B 到服务端 B</li>
+<li>服务端返回确认</li>
+<li>服务端发送连接关闭 B -&gt; A 到客户端</li>
+<li>客户端发送确认，服务端收到就关闭，客户端等待一段时间也关闭</li>
+</ol>
+</li>
+</ul>
+<h3 id="手写题"><a href="#手写题" class="headerlink" title="手写题"></a>手写题</h3><ul>
+<li>手写instanceof</li>
+<li>实现数组的map方法</li>
+<li>reduce实现数组的map方法</li>
+<li>手写数组的reduce方法</li>
+<li>数组扁平化</li>
+<li>函数柯里化</li>
+<li>浅拷贝实现</li>
+<li>深拷贝实现</li>
+<li>手写call/apply/bind</li>
+<li>手动实现new</li>
+<li>手写promise(常考promise.all, promise.race))</li>
+<li>手写原生AJAX</li>
+<li>手写节流防抖函数</li>
+<li>手写Promise加载图片</li>
+<li>实现事件订阅发布(eventBus)</li>
+</ul>
+<p>&lt;<a target="_blank" rel="noopener" href="https://daijl.cn/51568/">https://daijl.cn/51568/</a> &gt;<br>&lt;<a target="_blank" rel="noopener" href="https://daijl.cn/39558/">https://daijl.cn/39558/</a> &gt;</p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2021/01/22/QnA/">工作中遇过的问题</a><a class="next" href="/2020/06/02/DFSnBFS/">DFS &amp; BFS</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 15px;">数据结构</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/Reactjs/" style="font-size: 15px;">Reactjs</a> <a href="/tags/Vuejs/" style="font-size: 15px;">Vuejs</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/05/05/%E5%A6%82%E4%BD%95%E5%9C%A8-vite-%E4%B8%AD%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97/">如何在 vite 中批量导入模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/19/Shell-%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8/">Shell 脚本入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/19/vue3/">Vue3 One Piece 初探</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/06/15/typescript/">TypeScript 学习参考</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/06/07/react/">React & Redux 入坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/25/vue-reactive/">Vue 2.x 响应式原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/24/website/">一些门钥匙</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/12/All-About-Webpack/">All About Webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/22/QnA/">工作中遇过的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/06/11/FE-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">FE 基础知识</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">- luozha -.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/latest/canvas-nest.js"></script><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
