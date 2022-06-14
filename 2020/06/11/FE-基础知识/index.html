@@ -7,13 +7,40 @@ html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
 toggle.addEventListener('click', () => {
 localStorage.dark = !(html.dataset.dark == 'true');
 html.dataset.dark = localStorage.dark;
-});</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">FE 基础知识</h1><a id="logo" href="/.">- luozha -</a><p class="description">命数如织 当为磐石</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">FE 基础知识</h1><div class="post-meta">2020-06-11<span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 4</span><span class="post-meta-item-text"> 分钟</span></span></span></div><div class="post-content"><h2 id="HTML-文档加载过程"><a href="#HTML-文档加载过程" class="headerlink" title="HTML 文档加载过程"></a>HTML 文档加载过程</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/16435ba1b32e">https://www.jianshu.com/p/16435ba1b32e</a> &gt;</p>
+});</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">FE 基础知识</h1><a id="logo" href="/.">- luozha -</a><p class="description">命数如织 当为磐石</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">FE 基础知识</h1><div class="post-meta">2020-06-11<span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1.3k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 5</span><span class="post-meta-item-text"> 分钟</span></span></span></div><div class="post-content"><h2 id="HTML-文档加载过程"><a href="#HTML-文档加载过程" class="headerlink" title="HTML 文档加载过程"></a>HTML 文档加载过程</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/16435ba1b32e">https://www.jianshu.com/p/16435ba1b32e</a> &gt;</p>
 <h2 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dcee13943ede">https://www.jianshu.com/p/dcee13943ede</a> &gt;<br>&lt;<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018977590">https://segmentfault.com/a/1190000018977590</a> &gt;</p>
 <h2 id="浏览器的回流与重绘"><a href="#浏览器的回流与重绘" class="headerlink" title="浏览器的回流与重绘"></a>浏览器的回流与重绘</h2><p>&lt;<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903569087266823">https://juejin.cn/post/6844903569087266823</a> &gt;</p>
 <h2 id="URI-和-URL-的区别"><a href="#URI-和-URL-的区别" class="headerlink" title="URI 和 URL 的区别"></a>URI 和 URL 的区别</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21950864">https://www.zhihu.com/question/21950864</a> &gt;</p>
+<h2 id="this-的指向"><a href="#this-的指向" class="headerlink" title="this 的指向"></a>this 的指向</h2><p>this代表函数调用相关联的对象，通常页称之为执行上下文。</p>
+<ol>
+<li>作为函数直接调用，非严格模式下，this指向window，严格模式下，this指向undefined；</li>
+<li>作为某对象的方法调用，this通常指向调用的对象。</li>
+<li>使用apply、call、bind 可以绑定this的指向。</li>
+<li>在构造函数中，this指向新创建的对象</li>
+<li>箭头函数没有单独的this值，this在箭头函数创建时确定，它与声明所在的上下文相同。</li>
+</ol>
+<h2 id="apply-call-bind"><a href="#apply-call-bind" class="headerlink" title="apply, call, bind"></a>apply, call, bind</h2><ol>
+<li>call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。　　</li>
+<li>bind() 方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入 bind() 方法的第一个参数作为 this，传入 bind() 方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。</li>
+</ol>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>&lt;<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903989088092174">https://juejin.cn/post/6844903989088092174</a> &gt;<br>&lt;<a target="_blank" rel="noopener" href="https://www.seozen.top/javascript-object-prototypes-chain.html">https://www.seozen.top/javascript-object-prototypes-chain.html</a> &gt;</p>
 <h2 id="ES6-模块与-CommonJS-模块的差异"><a href="#ES6-模块与-CommonJS-模块的差异" class="headerlink" title="ES6 模块与 CommonJS 模块的差异"></a>ES6 模块与 CommonJS 模块的差异</h2><p>&lt;<a target="_blank" rel="noopener" href="https://wangdoc.com/es6/module-loader.html">https://wangdoc.com/es6/module-loader.html</a> &gt;</p>
 <h2 id="什么是跨域？解决跨域的办法有哪些？"><a href="#什么是跨域？解决跨域的办法有哪些？" class="headerlink" title="什么是跨域？解决跨域的办法有哪些？"></a>什么是跨域？解决跨域的办法有哪些？</h2><p>&lt;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nb411P7tQ?p=14&amp;t=61.4">https://www.bilibili.com/video/BV1nb411P7tQ?p=14&amp;t=61.4</a> &gt;</p>
+<ol>
+<li>同源策略<ul>
+<li>是浏览器的安全策略</li>
+<li>要求协议名、域名、端口号必须完全一致</li>
+</ul>
+</li>
+<li>跨域<ul>
+<li>违背同源策略就会产生跨越</li>
+</ul>
+</li>
+<li>解决跨域<ul>
+<li>jsonp cors 服务器代理</li>
+</ul>
+</li>
+</ol>
 <h2 id="npm-yarn-cnpm-pnpm"><a href="#npm-yarn-cnpm-pnpm" class="headerlink" title="npm yarn cnpm pnpm"></a>npm yarn cnpm pnpm</h2><p>&lt;<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32614411/article/details/80894605">https://blog.csdn.net/qq_32614411/article/details/80894605</a> &gt;</p>
 <h2 id="事件循环-Event-Loop"><a href="#事件循环-Event-Loop" class="headerlink" title="事件循环(Event Loop)"></a>事件循环(Event Loop)</h2><ul>
 <li>一开始整个脚本作为一个宏任务执行</li>
