@@ -23,7 +23,13 @@ new Proxy(data, {
 })
 ```
 
+### 事件修饰符 Event Modifiers
+<https://segmentfault.com/a/1190000016786254 >
 
+
+### ref 与 reactive 的使用
+1. 对象类型的变量声明用 reactive，其他都用 ref
+2. reactive 的数据变化用 Object.assign()，ref 的数据赋值到 .value 内
 
 
 

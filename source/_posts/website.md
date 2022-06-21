@@ -40,6 +40,7 @@ toc: true
 - <https://ashita.top/ >
 - <https://geekplux.com/ >
 - <https://jaapgrolleman.com/on-china/ >
+- <https://fdirectionclear.github.io/ >
 
 ### 学习资料
 
@@ -95,6 +96,7 @@ toc: true
 - TypeScript <https://www.tslang.cn/docs/home.html >
 - TypeScript 入门教程 <https://juejin.cn/post/6844904182843965453 >
 - TypeScript Playground <https://www.typescriptlang.org/play/ >
+- Airbnb JavaScript 风格指南 <https://lin-123.github.io/javascript/ >
 
 ### Free API 
 - <https://thecatapi.com/ >
@@ -155,6 +157,7 @@ toc: true
 - <https://rpdc.xiaohongshu.com/52-design-principles >
 - Lorem Ipsum <https://www.lipsum.com/ >
 - <https://js1k.com/ >
+- <https://www.ianfisherart.com/gallery/painting >
 
 ### 社区 & 论坛
 

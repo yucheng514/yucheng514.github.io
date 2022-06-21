@@ -4,8 +4,14 @@ date: 2020-06-11 01:30:47
 tags:
 ---
 ## HTML 文档加载过程
-
 <https://www.jianshu.com/p/16435ba1b32e >
+
+1. DOM 元素：正常顺序加载，边加载边渲染
+2. 内联 CSS：继续加载，渲染被阻塞，生成新的 CSS Rule Tree 后重新渲染
+3. 外联 CSS：启动一个线程加载 CSS 文件，DOM 继续加载但渲染被阻塞
+4. 内联 JS：执行这段代码，DOM 的加载和渲染同时被阻塞
+5. 外联 JS：下载成功后执行，DOM 的加载和渲染同时被阻塞
+6. defer / async 不会阻塞 DOM 其他内容的加载
 
 ## 事件模型
 
@@ -20,18 +26,44 @@ tags:
 
 <https://www.zhihu.com/question/21950864 >
 
+## this 的指向
+
+this代表函数调用相关联的对象，通常页称之为执行上下文。
+1. 作为函数直接调用，非严格模式下，this 指向 window，严格模式下，this 指向 undefined；
+2. 作为某对象的方法调用，this 通常指向调用的对象。
+3. 使用 apply、call、bind 可以绑定 this 的指向。
+4. 在构造函数中，this 指向新创建的对象
+5. 箭头函数没有单独的 this 值，this 在箭头函数创建时确定，它与声明所在的上下文相同。
+
+## apply, call, bind
+1. call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。　　
+2. bind() 方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入 bind() 方法的第一个参数作为 this，传入 bind() 方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。
+
+
 ## 原型链
 
 <https://juejin.cn/post/6844903989088092174 >
 <https://www.seozen.top/javascript-object-prototypes-chain.html >
+1. Person.prototype.constructor == Person 
+**准则1：原型对象（即Person.prototype）的constructor指向构造函数本身**
+2. person01.__proto__ == Person.prototype 
+**准则2：实例（即person01）的__proto__和原型对象指向同一个地方**
+
 
 ## ES6 模块与 CommonJS 模块的差异
 
 <https://wangdoc.com/es6/module-loader.html >
 
 ## 什么是跨域？解决跨域的办法有哪些？
-
 <https://www.bilibili.com/video/BV1nb411P7tQ?p=14&t=61.4 >
+1. 同源策略
+   - 是浏览器的安全策略
+   - 要求协议名、域名、端口号必须完全一致
+2. 跨域
+   - 违背同源策略就会产生跨越
+3. 解决跨域
+   - jsonp cors 服务器代理
+
 
 ## npm yarn cnpm pnpm
 <https://blog.csdn.net/qq_32614411/article/details/80894605 >
