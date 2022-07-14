@@ -5,12 +5,26 @@ tags:
 toc: true
 ---
 
+### 使用 git rebase 来合并分支
+以 xxx 分支合并到 main 为例：
+1. git checkout xxx
+2. git rebase main // 使用 rebase 命令把自己的 commit 信息复制到 main 分支上
+3. git checkout main
+4. git merge xxx
+5. git push
+
+### 删除分支
+删除本地分支:
+git branch -d 本地分支名
+删除远程分支:
+git push origin --delete 远程分支名
+
 ### 分支获取另一分支的更新
-以xxx分支获取master的更新为例：
-1. git checkout master
+以 xxx 分支获取 main 的更新为例：
+1. git checkout main
 2. git pull
 3. git checkout xxx（自己的分支
-4. git merge master
+4. git merge main
 5. git push origin xxx
 
 ### Ambiguous 警告
@@ -107,7 +121,7 @@ git push -u origin feature/pre_release_batch_tool_20200702
 - git更新
 
 ```
-git pull origin master
+git pull origin main
 ```
 
 - git上传
@@ -117,7 +131,7 @@ git add .
 
 git commit -m "  "
 
-git push origin master
+git push origin main
 ```
 
 - git终端
