@@ -158,6 +158,7 @@ toc: true
 - Lorem Ipsum <https://www.lipsum.com/ >
 - <https://js1k.com/ >
 - <https://www.ianfisherart.com/gallery/painting >
+- 九歌——人工智能诗歌写作系统 <http://jiuge.thunlp.org/index.html >
 
 ### 社区 & 论坛
 
