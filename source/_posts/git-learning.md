@@ -5,6 +5,13 @@ tags:
 toc: true
 ---
 
+### git commit 修改日期
+`
+// git commit --date="月 日 时间 年 +0800" -am "commit msg"
+
+git commit --date="Aug 8 09:00:00 2022 +0800" -am "chore: auto update viewer"
+`
+
 ### 使用 git rebase 来合并分支
 以 xxx 分支合并到 main 为例：
 1. git checkout xxx
